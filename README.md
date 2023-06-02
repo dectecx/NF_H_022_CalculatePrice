@@ -1,14 +1,15 @@
-�ϥ� C# .NET web ���ε{���� MVC
-²����]�ж��q�жO�έp��{��
-(1)	�ϥΤ@��TextBox �ӿ�J�A���m�W
-(2)	�ϥΤ@�� DropDownList ����ܩЫ��λ���, �Ы��λ����p�U
-i�B�s��, NT$2,500
-ii�B�e��, NT$3,000
-iii�B���D, NT$2,000
-(3)	�ϥΤ@�� TextBox �ӿ�J�q�ФѼ�
-(4)	���U Submit Button ��p���`�@�O��
-(5)	���}�t�@�� View����ܤU�C��T
-i�B�A���m�W
-ii�B�Ы�
-iii�B�q�ФѼ�
-iv�B�`�O��
+使用 C# .NET web 應用程式的 MVC
+
+簡單旅館房間訂房費用計算程式
+- 使用一個TextBox 來輸入你的姓名
+- 使用一個 DropDownList 來顯示房型及價錢, 房型及價錢如下
+  1. 山景, NT$2,500
+  2. 河景, NT$3,000
+  3. 走道, NT$2,000
+- 使用一個 TextBox 來輸入訂房天數
+- 按下 Submit Button 後計算總共費用
+- 打開另一個 View來顯示下列資訊
+  1. 你的姓名
+  2. 房型
+  3. 訂房天數
+  4. 總費用
