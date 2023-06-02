@@ -5,19 +5,23 @@
     <form action="@Url.Action("CalculatePrice", "Home")" method="post">
         <div class="col-md-12">
             <label for="userName">你的姓名:</label>
-            <input type="text" class="form-control" name="userName" value="" placeholder="請輸入你的姓名" required />
+            @Html.TextBox("userName", "", new { @class = "form-control", placeholder = "請輸入你的姓名", required = "required" })
         </div>
         <div class="col-md-12">
+            @{ 
+                List<SelectListItem> roomTypeList = new List<SelectListItem>
+                {
+                    new SelectListItem { Text = "山景 - NT$2,500" , Value = "mountainView" },
+                    new SelectListItem { Text = "河景 - NT$3,000" , Value = "riverView" },
+                    new SelectListItem { Text = "走道 - NT$2,000" , Value = "aislePlace" }
+                };
+            }
             <label for="roomType">房型:</label>
-            <select class="form-control" name="roomType" required>
-                <option value="mountainView">山景 - NT$2,500</option>
-                <option value="riverView">河景 - NT$3,000</option>
-                <option value="aislePlace">走道 - NT$2,000</option>
-            </select>
+            @Html.DropDownList("roomType", roomTypeList, "請選擇", new { @class = "form-control", required = "required" })
         </div>
         <div class="col-md-12">
             <label for="numDays">訂房天數:</label>
-            <input type="number" class="form-control" name="numDays" placeholder="請輸入訂房天數(1-90)" min="1" max="90" required><br><br>
+            @Html.TextBox("numDays", "", new { type = "number", @class = "form-control", placeholder = "請輸入訂房天數(1-90)", min = "1", max = "90", required = "required" })
         </div>
         <div class="col-md-12">
             <button type="submit" class="btn btn-info">送出</button>
