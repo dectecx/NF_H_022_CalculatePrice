@@ -1,0 +1,30 @@
+﻿<div class="jumbotron">
+    <p class="lead">訂房結果</p>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <label for="userName">你的姓名:</label>
+        <span>@ViewBag.UserName</span>
+    </div>
+    <div class="col-md-12">
+        <label for="roomType">房型:</label>
+        <span>@ViewBag.RoomName</span>
+    </div>
+    <div class="col-md-12">
+        <label for="numDays">訂房天數:</label>
+        <span>@ViewBag.NumDays</span>
+    </div>
+    <div class="col-md-12">
+        <label for="numDays">總費用:</label>
+        <span>@ViewBag.TotalPrice</span>
+    </div>
+    <div class="col-md-12">
+        <button type="button" class="btn btn-info" onclick="goBackHome()">重新訂房</button>
+    </div>
+</div>
+<script>
+    /** 返回首頁 */
+    function goBackHome() {
+        location.href = '@Url.Action("Index", "Home")';
+    }
+</script>
